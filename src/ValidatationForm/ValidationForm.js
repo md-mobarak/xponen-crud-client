@@ -6,7 +6,7 @@ const ValidationForm = () => {
     const { register, formState: { errors }, reset, handleSubmit } = useForm();
 
     const onSubmit = (data) => {
-        fetch(`http://localhost:5000/AddData`, {
+        fetch(`https://limitless-reef-73871.herokuapp.com/AddData`, {
             method: 'POST',
             headers: {
                 'Content-type': 'application/json'
@@ -15,6 +15,7 @@ const ValidationForm = () => {
         })
             .then(res => res.json())
             .then(data => {
+
                 console.log(data);
             })
         reset()
